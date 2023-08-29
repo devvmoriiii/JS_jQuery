@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS vs jQuery (3) - 애니메이션 효과</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <style>
+        * {
+      font-size: 15px;
+      font-family: "Noto Sans KR";
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+
+    #panel {
+      margin: 30px auto;
+      width: 600px;
+      height: 300px;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+    #gigu {
+      position: absolute;
+      left: 50px;
+      top: 140px;
+    }
+
+    #bar {
+      position: absolute;
+      left: 50px;
+      top: 190px;
+      width: 500px;
+      height: 15px;
+      background-color: orange;
+    }
+
+
+      button {
+        display: block;
+        margin: 30px auto;
+        width: 200px;
+        height: 40px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        font-weight: 900;
+      }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div id="panel">
+      <div id="bar"></div>
+      <img src="resources/earth.jpg" id="gigu" alt="">
+    </div>
+    <div id="nav">
+      <button  type="button" id="btnStart">BUTTON</button>
+    </div>
+  </div>
+</body>
+<!-- JS ver. -->
+<!-- <script src="js/JSvsjQuery3.animation(JS).js"></script> -->
+
+<!-- jQuery ver. -->
+<script src="js/JSvsjQuery3.animation(jQuery).js"></script>
+</html>
