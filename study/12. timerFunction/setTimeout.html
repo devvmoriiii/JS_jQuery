@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머 함수 (2) - setTImeout() 함수</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $content = $("#content");
+      setTimeout(hi, 3000);
+
+      function hi() {
+        $content.html("Hi, JS!");
+        $content.css({
+          "background-color" : "lightcoral",
+          "color" : "#fff"
+        });
+      }
+    });
+  </script>
+
+  <style>
+    * {padding: 0; margin: 0;}
+    div {
+      width: 50%;
+      height: 300px;
+      line-height: 300px;
+      text-align: center;
+      border: 1px solid #ccc;
+      margin: 30px auto;
+      font-size: 3em;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+</html>

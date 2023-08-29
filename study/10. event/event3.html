@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 (3) - 그룹 이벤트</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    //(1)
+    $(document).ready(function() {
+      $("#btn").on("mouseover focus", function() {
+        alert("Hi, jQuery!");
+      });
+    });
+
+    //(2)
+    $(document).ready(function() {
+      $("#btn").on({
+        "mouseover focus" : function() {
+          alert("Hello, jQuery!");
+        }
+      });
+    });
+
+    //(3)
+    $(document).ready(function() {
+      $("#btn").on({
+        "mouseover" : function() {
+          alert("Hi, jQuery!!!");
+        },
+        "focus" : function() {
+          document.write("Hi, Focus!");
+        }
+      });
+    });
+  </script>
+</head>
+<body>  
+  <button id="btn">버튼</button>
+</body>
+</html>

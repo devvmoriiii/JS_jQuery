@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문 do ... while (2) - 입력 프로그램</title>
+</head>
+<body>
+  <script>
+    var inputString = null;
+
+    alert("메세지를 입력하세요.");
+    alert("프로그램을 종료할 경우 'q' 를 입력하세요.");
+
+    do {
+      inputString = prompt("메세지를 입력하세요.");
+      document.write(inputString + "<br />");
+    } while (! (inputString == "q")); // == while (inputString != "q");
+
+    document.write("프로그램 종료");
+  </script>
+</body>
+</html> 

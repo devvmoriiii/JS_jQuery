@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 클래스 (3) - 시계 생성</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    var $clock = null;
+    $(document).ready(function() {
+      $clock = $("#clock");
+      setInterval(clock, 500);
+    }); 
+
+    function clock() {
+      function addZero(value) {
+        if(value < 10) {
+          value = "0" + value;
+        };
+        return value;
+      };
+
+      function showClock() {
+        var date = new Date();
+        var year = addZero(date.getFullYear());
+        var month = addZero(date.getMonth() + 1);
+        var date1 = addZero(date.getDate());
+        var day = date.getDay();
+        var arrDays = ["일", "월", "화", "수", "목", "금", "토"];
+        var hour = addZero(date.getHours());
+        var min = addZero(date.getMinutes());
+        var sec = addZero(date.getSeconds());
+
+        var fullDay = year + "년 " + month + "월 " + date1 + "일 " + arrDays[day] + "요일";
+        var time = hour + ":" + min + ":" + sec;
+        
+        $clock.html(fullDay + "<br />" + time);
+      };
+
+      showClock();
+    };
+  </script>
+
+  <style>
+    #clock{
+      width: 50%;
+      height: 500px;
+      margin: 50px auto;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 100px;
+      padding: 150px 0px;
+      font-size: 2em;
+      font-weight: 900;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock">
+    00:00:00
+  </div>
+</body>
+</html>

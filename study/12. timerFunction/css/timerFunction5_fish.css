@@ -1,0 +1,47 @@
+* {padding: 0; margin: 0;}
+
+#panel {
+  margin: 50px auto;
+  width: 600px;
+  height: 300px;
+  border: 1px solid #333;
+  position: relative;
+  background-color: lightblue;
+}
+
+#bar {
+  position: absolute;
+  left: 50px;
+  top: 190px;
+  width: 500px;
+  height: 20px;
+  background-color: rgb(124, 206, 124);
+}
+
+#fish {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+}
+
+#nav {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  line-height: 40px;
+  margin: 0 30px;
+  border: none;
+  background-color: lightslategray;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+ 
+#nav :hover {
+cursor: pointer;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String 클래스 (2) - charAt() 메서드</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var $str = window.prompt("문자열을 입력하세요.");
+      var $print = $("#print");
+      var index = 0;
+      var timerID = null;
+
+      timerID = setInterval(function () {
+        var ch = $str.charAt(index);
+        $print.text(ch);
+        index++;
+
+        if (index > $str.length) {
+          clearInterval(timerID);
+          alert("문자열 출력 종료.");
+        }
+      }, 500);
+    });
+  </script>
+
+  <style>
+    #print {
+      margin: 50px auto;
+      width: 500px;
+      height: 300px;
+      border: 1px solid #000;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="print"></div>
+</body>
+</html>

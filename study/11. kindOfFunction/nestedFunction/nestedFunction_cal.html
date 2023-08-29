@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩 함수 (1) - 사칙연산 프로그램</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    function calculator(op, num1, num2) {
+
+      var op = window.prompt("연산자를 입력하세요. (+, -, *, /)");
+      var num1 = Number(window.prompt("첫 번째 숫자를 입력하세요"));
+      var num2 = Number(window.prompt("두 번째 숫자를 입력하세요"));
+
+      switch(op) {
+        case "+": result = add(num1, num2);
+          break;
+        case "-": result = sub(num1, num2);
+          break;
+        case "*": result = mul(num1, num2);
+          break;
+        case "/": result = div(num1, num2);
+          break;
+        default: result = "지원하지 않는 연산자입니다.";
+      }
+
+      function add(num1, num2) {
+        return num1 + num2;
+      };
+      function sub(num1, num2) {
+        return num1 - num2;
+      };
+      function mul(num1, num2) {
+        return num1 * num2;
+      };
+      function div(num1, num2) {
+        return num1 / num2;
+      };
+      return result;
+    };
+    
+    $(function( ) {
+      var result = calculator();
+      document.write("결과: " + result);
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

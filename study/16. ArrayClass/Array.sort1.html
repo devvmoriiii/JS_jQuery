@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 클래스 (7) - sort() 메서드 (문자열 정렬)</title>
+  <Script>
+    // 기본값
+    var Names = ["민지", "혜인", "하니", "해린", "다니엘"];
+    document.write("실행 전 : " + Names.join(", ") + "<br />");
+
+    Names.sort();
+    document.write("기본값 정렬 후 : " + Names.join(", ") + "<br />" + "<br />"); 
+
+
+    // 오름차순
+    var ascNames = ["민지", "혜인", "하니", "해린", "다니엘"];
+    document.write("실행 전 : " + ascNames.join(", ") + "<br />");
+
+    ascNames.sort(function(a, b) {
+      if(a < b) {return -1};
+      if(a > b) {return 1};
+    });
+    document.write("기본값 정렬 후 : " + ascNames.join(", ") + "<br />" + "<br />"); 
+
+
+    // 내림차순
+    var descNames = ["민지", "혜인", "하니", "해린", "다니엘"];
+    document.write("실행 전 : " + descNames.join(", ") + "<br />");
+
+    descNames.sort(function(a, b) {
+      if(a > b) {return -1};
+      if(a < b) {return 1};
+    });
+    document.write("내림차순 정렬 후 : " + descNames.join(", ") + "<br />" + "<br />"); 
+  </Script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 400px;
+  height: 300px;
+}
+
+#button {
+  text-align: center;
+  margin: 30px auto;
+}
+
+button {
+  padding: 10px 100px;
+  border-radius: 0%;
+  border: 1px solid #ccc;
+  background-color: darkslateblue;
+  color: #fff;
+  font-weight: 900;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#container1 {
+  position: relative;
+  width: 1300px;
+  margin: 30px auto;
+  height: 1000px;
+}
+
+#container1 img {
+  position: absolute;
+  top: 20px;
+  left: 450px;
+}
+
+img:nth-child(5) {
+  z-index: 1;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스코프 (1) - 전역 변수 & 지역 변수</title>
+</head>
+<body>
+  <script>
+    var name = "global";
+
+    function func1() {
+      var name = "local1";
+      document.write("name = " + name + "<br />");
+    }
+    function func2() {
+      var name = "local2";
+      document.write("name = " + name + "<br />");
+    }
+    function func3() {
+      name = "local3";
+      document.write("name = " + name + "<br />");
+    }
+    
+    document.write("name = " + name + "<br />");
+    func1();
+    func2();
+    func3();
+    document.write("name = " + name + "<br />");
+
+  </script>
+</body>
+</html>

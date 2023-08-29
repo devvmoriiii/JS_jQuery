@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 클래스 (10) - 배열을 이용한 배너 생성</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $arrBanner = $(".arrBanner");
+      var i = 0;
+      var bannerList = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+      setInterval(function() {
+        i ++;
+        if(i >= bannerList.length) {
+          i = 0;
+        }
+
+        var bannerName = bannerList[i];
+        $arrBanner.attr("src", "resources/banner" + bannerName + ".jpg");
+      }, 1000);
+
+    });
+  </script>
+
+  <style>
+    * {padding: 0; margin: 0;}
+
+    img {
+    display: block;
+    width: 100%;
+    margin: 50px 0;
+    height: 700px;
+    }
+  </style>
+</head>
+<body>
+  <img src="resources/banner1.jpg" class="arrBanner" id="arrBanner1" alt="">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문 for (4) - 사용자 입력 및 구구단 프로그램 </title>
+</head>
+<body>
+  <script>
+    var dan = prompt("출력할 'n' 단을 입력하세요.", "숫자 입력");
+    dan = parseInt(dan);
+
+    for (i = 1; i <= 9; i++) {
+      if (i == 1) {
+        document.write("구구단" + i + "단 <br /> <br />");
+      }
+      document.write(dan + "*" + i + " = " + (dan * i) + "<br />");
+    }
+  </script>
+</body>
+</html>

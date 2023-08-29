@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 클래스 (8) - sort() 메서드 (숫자 정렬)</title>
+  <script>
+var numbers = [6, 7, 9, 1, 4, 77, 11];
+document.write("실행 전 : " + numbers.join(", ") + "<br />");
+
+numbers.sort();
+document.write("기본값 정렬 후 : " + numbers.join(", ") + "<br />");
+
+numbers.sort(function(a, b) {
+  if(a < b) {return -1;};
+  if(a > b) {return 1;};
+});
+document.write("오름차순 정렬 후 : " + numbers.join(", ") + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

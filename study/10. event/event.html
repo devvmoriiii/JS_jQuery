@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 (1) - 상세 설명 </title>
+  <link rel="stylesheet" href="css/event.css">
+  <script src="js/event.js"></script>
+</head>
+<body>
+  <div id="item">
+    <img src="resources/y2k.jpg" alt="">
+    <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+  </div>
+
+  <div class="detail" id="desc">
+    <h3>Y2K ?</h3>
+    <p>
+      Y2K 단어의 뜻 자체는 1999년에서 2000년으로 넘어갈 당시, 현재 우리가 사용하는 컴퓨터도 그렇고 대부분의 컴퓨터가 이진법으로 이루어져 있기에, 연도를 끝의 두 자릿수만 인식하게 돼 있다. 
+      <br />
+      따라서 2000년이 되면 ‘00’으로 인식해 1900년과 혼동이 일어난다. 이로 인한 사회적 대혼란을 ‘컴퓨터 2000년 연도표기 문제’라고 부르는데, 이를 천년대(代)의 오류란 의미에서 ‘밀레니엄버그’라고도
+      하며 말을 줄여 ‘Year(연도)’의 ‘Y’와 1천을 뜻하는 ‘Kilo’의 ‘K’를 붙여 ‘Y2K’ 문제라고도 한다. <br />
+      그래서 그 Y2K의 시대, 90년대~00년대에 걸쳐 유행하던 옷들이 다시 2023년, 현재의 가장 젊은 세대들에게 유행한다는 것이다. 이러한 복고 패션의 트렌드와 더불어 MZ세대만의 강한 개성을 표출하기 위한
+      다양한 패션의 시도가 이어지고 있으며, 특히나 특정한 브랜드에만 국한하지 않고 좀 더 다양한 스트릿 패션 브랜드에 대해 관심이 높아지면서 다양하게 표현되고 있다.
+    </p>
+    <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+  </div>
+</body>
+</html>

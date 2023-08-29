@@ -1,0 +1,38 @@
+* {padding: 0; Margin:0;}
+
+#container {
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  position: relative;
+  border: 1px solid #333;
+  background: url(../resources/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 250px;
+  top: 150px;
+}
+
+
+#head{
+  border: 1px solid #ccc;
+  width: 50%;
+  margin: 30px auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: lightgoldenrodyellow;
+}
+
+#score {
+  color: rgb(15, 102, 110);
+  margin: 0 10px;
+}

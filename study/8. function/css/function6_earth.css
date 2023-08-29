@@ -1,0 +1,66 @@
+* {padding:0; margin: 0;}
+body {font-size: 10pt;}
+
+#wrap {
+  margin: 50px auto;
+  width: 500px;
+}
+
+#panel {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background: url(../resources/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+#earth {
+  position: absolute;
+  width: 80px;
+  left: 50px;
+  top: 120px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px #a9a8a8;
+}
+
+#nav {
+  float: left;
+  width: 500px;
+  margin: 10px;
+  height: 200px;
+}
+
+#text {
+  float: left;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+#nav label {
+  margin-right: 20px;
+}
+
+#nav input {
+  width: 120px;
+  margin-bottom: 20px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+
+#btn {
+  float: right;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  
+}
+
+#btn button {
+  margin-top: 20px;
+  padding: 20px 50px;
+  background-color: lightcoral;
+  color: white;
+  border: 1px solid #ccc;
+  font-weight: 700;
+}

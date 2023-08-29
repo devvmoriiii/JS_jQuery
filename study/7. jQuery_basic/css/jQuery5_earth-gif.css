@@ -1,0 +1,21 @@
+* {padding: 0; margin: 0;}
+
+.hello {
+  background: url(../resources/earth.jpg) no-repeat center center;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  color: #fafad2;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 45pt;
+  font-weight: 700;  
+  text-shadow: 0 0 7px #eaeaa8;
+}

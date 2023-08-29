@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 클래스 (2) - getHours(), getMinutes(), getSeconds(), getMilliseconds() (날짜 출력)</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $print = $("#print");
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = (date.getMonth() + 1);
+      var date1 = date.getDate();
+      var day = date.getDay();
+
+      var arrDays = [ "일", "월", "화", "수", "목", "금", "토"];
+
+      $print.html(year + "년 " + month + "월 " + date1 + "일 " + arrDays[day] + "요일");
+    });
+  </script>
+  <style>
+    #print {
+      width: 500px;
+      height: 250px;
+      margin: 30px auto;
+      text-align: center;
+      line-height: 250px;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="print"></div>
+</body>
+</html>

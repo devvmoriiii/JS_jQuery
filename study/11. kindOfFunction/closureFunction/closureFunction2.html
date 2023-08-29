@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클로저 함수 (2) - </title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btnStart").click(function() {
+        start();
+        document.write("START!");
+      });
+
+      function start() {
+        var cnt = 0;
+        setInterval(function() {
+          cnt ++;
+          document.write(cnt + "<br />");
+        }, 2000);
+      };
+    });
+  </script>
+</head>
+<body>
+  <button id="btnStart">START</button>
+</body>
+</html>

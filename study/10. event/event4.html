@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 (4) - 이벤트 등록 및 해제</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn1").click(function () {
+        $("p:nth-child(1)").css({
+          "color": "cornflowerblue",
+          "font-size": "25px"
+        });
+      });
+
+      $(".btn2").on({
+        "mouseover": function () {
+          btn2StyleOn();
+        },
+        "mousedown": function () {
+          btn2StyleOn();
+          $("p:nth-child(3)").css("font-weight", "900");
+        },
+        "mouseout" : function() {
+          btn2StyleOff();
+          $("p:nth-child(3)").css("font-weight", "normal");
+        }
+      })
+
+      function btn2StyleOn() {
+        $("p:nth-child(3)").css({
+          "color": "lightcoral",
+          "font-size": "20px",
+        });
+      };
+
+      function btn2StyleOff() {
+        $("p:nth-child(3)").css({
+          "color" : "#000",
+          "font-size" : "1em"
+        });
+      };
+
+      $(".btn1").off("click");
+      $(".btn2").off("mousedown mouseout" );
+    });
+
+
+  </script>
+</head>
+<body>
+  <p>Hi, JS!</p>
+  <button class="btn1">BUTTON1</button>
+  <p>Hi, jQuery!</p>
+  <button class="btn2">BUTTON2</button>
+</body>
+</html>

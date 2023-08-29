@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM (3) - DOM 속성 변경</title>
+  <link rel="stylesheet" href="css/DOM3_coffee.css">
+</head>
+<body>
+  <div id="container">
+    <h1 id="heading">COFFEE CUP</h1>
+    <div id="prod_img">
+      <img src="resources/coffee1.jpeg" alt="" id="cup" width="300" height="300">
+      <div id="small_img">
+        <img src="resources/coffee1.jpeg" alt="" class="small">
+        <img src="resources/coffee2.jpeg" alt="" class="small">
+        <img src="resources/coffee3.jpeg" alt="" class="small">
+      </div>
+    </div>
+
+    <div id="desc">
+      <ul>
+        <li>상품명 : COFFEE CUP</li>
+        <li class="blueText">가격 : 9,000원</li>
+        <li>배송비 : 3,000원</li>
+        <li>적립금 : 30원 (1%)</li>
+        <li>제조일자: 2023.08.15</li>
+        <button type="button">장바구니 담기</button>
+      </ul>
+
+      <!-- <a href="#" id="view">상세 설명</a> -->
+    </div>
+  </div>
+</body>
+<script src="js/DOM3_coffee.js"></script>
+</html>

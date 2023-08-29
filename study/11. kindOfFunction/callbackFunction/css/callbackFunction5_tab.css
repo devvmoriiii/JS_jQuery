@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.tab_menu {
+  list-style: none;
+  height: 80px;
+  margin: 80px auto;
+  margin-bottom: 10px;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+div {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: lightgoldenrodyellow;
+  box-sizing: border-box;
+  padding: 30px;
+  font-weight: 400;
+  color: #333;
+}
+
+.tab_menu li {
+  width: 100px;
+  height: 40px;
+  background-position-y: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.tab_menu li:hover {
+  background-position-y: -40px;
+}
+
+.tab_menu li.select {
+  background-position-y: -80px;
+  height: 80px;
+}
+
+.menuitem1 {
+  background: url(../resources/newbtn.bar.1.png);
+}
+
+.menuitem2 {
+  background: url(../resources/newbtn.bar.2.png);
+}
+
+.menuitem3 {
+  background: url(../resources/newbtn.bar.3.png);
+}
+
+.menuitem4 {
+  background: url(../resources/newbtn.bar.4.png);
+}
+
+.menuitem5 {
+  background: url(../resources/newbtn.bar.5.png);
+}
+
+.menuitem6 {
+  background: url(../resources/newbtn.bar.6.png);
+}

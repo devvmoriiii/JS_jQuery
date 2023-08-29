@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 (5) - 홀짝 구분</title>
+</head>
+<body>
+  <script>
+    function checkOdd(number) {
+      if (number % 2 == 0) {
+        document.write(number + "는 짝수입니다.");
+      }
+      else {
+        document.write(number + "는 홀수입니다.");
+      }
+    }
+
+    var number = window.prompt("숫자를 입력해주세요.");
+    checkOdd(number);
+  </script>
+</body>
+</html>

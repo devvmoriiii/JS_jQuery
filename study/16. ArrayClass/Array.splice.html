@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 클래스 (5) - splice() 메서드</title>
+  <script>
+    var menus = ["MENU1", "MENU2", "MENU3", "MENU4"];
+    document.write("실행 전: " + menus.join(", ") + "<br />");
+
+    // menus.splice(2, 0, "MENU2.5");
+    // menus.splice(4, 0, "MENU3.5");
+    // document.write("splice() 추가 후: " + menus.join(", ") + "<br />");
+
+    menus.splice(1, 2);
+    document.write("splice() 제거 후: " + menus.join(", ") + "<br />");
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

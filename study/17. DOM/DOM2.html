@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM (2) - DOM 요소 접근</title>
+  <style>
+    * {padding: 0; margin: 0;}
+
+    img {
+      display: block;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+    }
+
+    #img {
+      width: 800px;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .bright, p {
+      margin-bottom: 10px;
+    }
+
+    .bright {
+      color: darkblue;
+    }
+
+    #container {
+      width: 800px;
+      height: 600px;
+      margin: 50px auto;
+      border: 1px solid #333;
+      padding: 20px 10px 0 10px;
+    }
+
+    #span {
+      font-weight: 900;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 id="text_head">NewYork</h1>
+    <div id="img">
+      <img src="resources/newyork.png" alt="">
+    </div>
+    <div id="desc">
+      <h2 class="bright">Info.</h2>
+      <p>New York, often called New York City or <span id="span">NYC</span>, is the most populous city in the United States. With a 2020 population of 8,804,190 distributed over 300.46 square miles (778.2 km2), New York City is the most densely populated major city in the United States.  </p>
+
+      <h2 class="bright">Note</h2>
+      <p>The city is more than twice as populous as Los Angeles, the nation's second-largest city. New York City is situated at the southern tip of New York State.</p>
+    </div>
+  </div>
+</body>
+</html>

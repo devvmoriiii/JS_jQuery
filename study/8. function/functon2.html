@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 (2) - 사칙연산 </title>
+</head>
+<body>
+  <script>
+    function hello() {
+      document.write("Hi! <br />");
+    }
+
+    hello();
+    hello();
+    hello();
+
+    function add (num1, num2) {
+      var result = num1 + num2;
+      return result;
+    }
+
+    function multi (num1, num2) {
+      result = num1 * num2;
+      return result;
+    }
+
+    function minus (num1, num2) {
+      var result = num1 - num2;
+      return result;
+    }
+
+    function div (num1, num2) {
+      result = num1 / num2;
+      return result;
+    }
+
+    var value = add(100, 200);
+    alert("두 수의 합: " + value);
+
+    multi(100, 200);
+    alert("두 수의 곱: " + result);
+
+    var value = minus(100, 200);
+    alert("두 수의 차이: " + value);
+
+    div(1000, 200);
+    alert("두 수의 몫: " + result);
+  </script>
+</body>
+</html>

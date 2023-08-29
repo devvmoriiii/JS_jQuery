@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 클래스 (3) - split() 메서드</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $menu = $("#menu");
+      var menuData = "MENU2, MENU3, MENU4, MENU5";
+      var menuItems = menuData.split(",");
+
+      for(var i = 0; i < menuItems.length; i ++) {
+        var newItem = "<li>" + menuItems[i] + "</li>";
+        $menu.append(newItem);
+      }
+    });
+  </script>
+
+  <style>
+    #menu{
+      list-style: none;
+      border: 1px solid #333;
+      height: 100px;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    #menu li {
+      height: 50px;
+      line-height: 50px;
+      display: block;
+      float: left;
+      padding: 0px 10px;
+      border: 1px solid cornflowerblue;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li>MENU1</li>
+  </ul>
+</body>
+</html>

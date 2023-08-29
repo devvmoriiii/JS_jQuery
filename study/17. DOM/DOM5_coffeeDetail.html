@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM (5) - 특정 요소 숨김/보임 처리</title>
+  <link rel="stylesheet" href="css/DOM5_coffeeDetail.css">
+</head>
+<body>
+  <div id="container">
+    <h1 id="heading">COFFEE CUP</h1>
+    <div id="prod_img">
+      <img src="resources/coffee1.jpeg" alt="" id="cup" width="300" height="300">
+      <div id="small_img">
+        <img src="resources/coffee1.jpeg" alt="" class="small">
+        <img src="resources/coffee2.jpeg" alt="" class="small">
+        <img src="resources/coffee3.jpeg" alt="" class="small">
+      </div>
+    </div>
+
+    <div id="desc">
+      <ul>
+        <li>상품명 : COFFEE CUP</li>
+        <li class="blueText">가격 : 9,000원</li>
+        <li>배송비 : 3,000원</li>
+        <li>적립금 : 30원 (1%)</li>
+        <li>제조일자: 2023.08.15</li>
+        <a href="#" id="view">상세 정보 열기</a>
+        <button type="button">장바구니 담기</button>
+      </ul>
+    </div>
+    
+    <div id="detail">
+      <hr />
+      <div id="left">
+        <h2>상품 상세 정보</h2>
+        <ul>
+          <li>원산지: 부산</li>
+      </div>
+      <div id="right">
+        </ul>
+        <h2>배송 상세 정보</h2>
+        <ul>
+          <li>배송 불가 지역: 도서산간 지역</li>
+          <li>택배사: 우체국택배</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/DOM5_coffeeDetail.js"></script>
+</html>

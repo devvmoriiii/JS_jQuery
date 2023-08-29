@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+
+#header{
+  color: cornflowerblue;
+}
+
+#text{
+  color: #333;
+  font-size: 15px;
+}

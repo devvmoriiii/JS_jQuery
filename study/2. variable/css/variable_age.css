@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+
+.btn{
+  margin: 50px 0 20px 0;
+  font-weight: 400;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid lightblue;
+  padding:5px;
+}
+
+.btn:hover{
+  background-color: lightcoral;
+  border: 1px solid #fff;
+}
+
+.show{
+  padding: 20px 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  
+}

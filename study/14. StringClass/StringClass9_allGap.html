@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String 클래스 (9) -전체 공백 제거(정규 표현식 사용)</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    var str = "  안녕하세요,  문자열을 자릅니다.  ";
+    console.log("원본 문자열: " + str);
+    console.log("전체 공백 제거: " + str.replace(/(\s *)/g, ""));
+    console.log("앞 공백 제거: " + str.replace(/^\s */, ""));
+    console.log("뒷 공백 제거: " + str.replace(/\s * $/, ""));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

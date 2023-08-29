@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일반 함수 (5) - 일반함수를 이용한 문구 출력 프로그램</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    var count = 1;
+    var $container = null;
+
+    $(document).ready(function() {
+      $container = $("#container");
+      $container.append("<p>버튼 클릭 시, 문구가 출력됩니다.</p>");
+
+      $("#btnPrint").click(function () {
+        print();
+      });
+
+      function print() {
+        $container.append("<p>" + count + ". Hi, JavaScipt!");
+          count ++;
+      };
+    });
+  </script>
+  <style>
+    #container{
+      border: 1px solid #000;
+      margin-top: 20px;
+      padding: 0px 20px;
+      line-height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btnPrint">출력하기</button>
+  <div id="container">
+
+  </div>
+</body>
+</html>

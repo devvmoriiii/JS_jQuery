@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백 함수 (4) - 특정 횟수 이후 알림창</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    // 일반 함수 Ver.
+    // $(document).ready(function() {
+    //   checkCount();
+    // });
+
+    // function checkCount() {
+    //   var count = 0;
+    //   $("#btnStart").click(function() {
+    //     count ++;
+    //     if (count == 5) {
+    //       alert("COUNT " + count + "회, 완료되었습니다.")
+    //     };
+    //   });
+    // };
+
+    // 콜백 함수 Ver.
+    $(document).ready(function() {
+      checkCount(showAlert);
+    });
+
+    function showAlert() {
+      alert("완료되었습니다.");
+    };
+
+    function checkCount(callback) {
+      var count = 0;
+      $("#btnStart").click(function() {
+        count ++;
+        if (count == 5) {
+          callback();
+        };
+      });
+    };
+  </script>
+</head>
+<body>
+  <button id="btnStart">COUNT</button>
+</body>
+</html>
