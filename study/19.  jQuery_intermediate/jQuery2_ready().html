@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery (2) - 진입점 ready() 메서드</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+
+  <script>
+    // ver.1
+    jQuery(document).ready(function() {
+      console.log("ready() ver.1");
+    });
+
+    // ver.2
+    jQuery(function() {
+      console.log("ready() ver.2");
+    });
+
+    // ver.3
+    $(document).ready(function() {
+      console.log("ready() ver.3");
+    });
+
+    // ver.4
+    $(function() {
+      console.log("ready() ver.4");
+    });
+  </script>
+</head>
+<body>
+  <h1>ready() 실행</h1>
+</body>
+</html>

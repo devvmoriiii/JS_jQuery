@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$() (2) - $() 함수 정의(2)</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var cnt = 1;
+      $("#addMenu").click(function() {
+        cnt ++;
+        $("#menu").append("<li>MENU" + cnt + "</li>");
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="addMenu" type="button">ADD</button>
+  <ul id="menu">
+    <li>MENU1</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$() (3) - $() 최적화</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // ver.1
+      // $("#menu").append("<li>MENU2</li>");
+      // $("#menu").append("<li>MENU3</li>");
+      // $("#menu").append("<li>MENU4</li>");
+      // $("#menu").append("<li>MENU5</li>");
+      // $("#menu").css("border", "1px solid #ccc");
+
+      // ver.2
+      var $menu = $("#menu");
+      $menu.append("<li>MENU2</li>");
+      $menu.append("<li>MENU3</li>");
+      $menu.append("<li>MENU4</li>");
+      $menu.append("<li>MENU5</li>");
+      $menu.css("border", "1px solid #ccc");
+    });
+  </script>
+</head>
+<body>
+  <ul id="menu">
+    <li>MENU1</li>
+  </ul>
+</body>
+</html>

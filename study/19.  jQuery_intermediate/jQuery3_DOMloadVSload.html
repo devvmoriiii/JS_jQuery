@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery (3) - DOMContentload VS load 이밴트</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $image = $("#image")
+      console.log("이미지의 너비: " + $image.width() + "  (DOMContentload ver.)");
+    });
+
+    window.onload = function() {
+      var $image = $("#image");
+      console.log("이미지의 너비: " + $image.width() + " (load ver.)");
+    };
+  </script>
+</head>
+<body>
+  <img src="resources/earth.jpg" id="image" alt="" w idth="300px" height="300px">
+</body>
+</html>
