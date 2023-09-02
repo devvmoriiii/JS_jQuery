@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (1) - length</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    body {cursor: pointer;}
+
+    div {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      float: left;
+      background-color: #333;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 1.2em;
+      color: #333;
+      font-weight: 800;
+    }
+  </style>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(document.body).click(function() {
+        $(document.body).append($("<div>"));
+          var length = $("div").length;
+          $("span").text("div 태그의 개수: " + length);
+      });
+    });
+  </script>
+</head>
+<body>
+  <span></span>
+  <div></div>
+</body>
+</html>
