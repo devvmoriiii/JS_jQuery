@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (6) - filter(), find() 메서드</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $liList = $("ul.menu li");
+      var $menu = $(".menu");
+      $liList.filter(".select").css("color", "red");
+      $menu.filter(".select").css("border", "1px solid red");
+      $liList.find(".select"). css("border", "1px solid red");
+
+      var $content = $("#content");
+      $content.find(".test1").css("color", "blue");
+      $content.filter(".test1").css("border", "1px solid red");
+    });
+  </script>
+  <style>
+    * {
+      font-size: 15px;
+      font-family: "Noto Sans KR";
+      margin: 0;
+      padding: 0;
+    }
+
+    div, p, ul, li {
+      border: 1px solid #e2e2e2;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    ul {
+      padding: 20px;
+    }
+
+    li.select {
+      background-color: #c2c2c2;
+    }
+  </style>
+</head>
+<body>
+  <div id="samplePage" class="page">
+    샘플 페이지(div, id = samplePage, class = page)
+
+    <div id="header">
+      헤더 (div, id=header)
+    </div>
+
+<div id="content" calss="sample-content">
+  노드 찾기 (div, id=content, class=sample-content)
+  <ul class="menu">
+    일반 노드 찾기 (ul, class = menu)
+    <li data-value = "1">id 로 찾기 (li, data-value = 1)</li>
+    <li class="select">tag 로 찾기 (li, class = select)</li>
+    <li data-value = "2">class 로 찾기 (li, data-value = 2)</li>
+    <li class="test1">속성으로 찾기 (li, class = test1)</li>
+  </ul>
+      <div class="content-data">
+        자식 노드 찾기 (div, class = content-data)
+        <p class="test1">1. 모든 자식 노드 찾기 (p, class = test1)</p>
+        <p>2. 특정 자식 노드만 찾기 (p)</p>
+        <p class="test2">2. 마지막 자식 노드 찾기 (p, class = test2)</p>
+      </div>
+    </div>
+
+    <div id="footer">
+      푸터 (div, id = footer)
+    </div>
+  </div>
+</body>
+</html>
+</html>

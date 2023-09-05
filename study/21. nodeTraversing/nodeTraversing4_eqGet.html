@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (2) - eq(), get() 메서드 </title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $divList = $("div");
+      var $div_two = $divList.eq(1);
+      $div_two.css("backgroundColor", "cornflowerblue");
+
+      var $div_thr = $divList.get(2);
+      $div_thr.style.border = "1px dashed red";
+
+      var $div_four = $divList[3];
+      $div_four.style.border = "1px dashed blue";
+
+    });
+  </script>
+  <style>
+    div {
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      margin: 10px;
+      float: left;
+      font-size: 0.8em;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div>DIV1</div>
+  <div>DIV2</div>
+  <div>DIV3</div>
+  <div>DIV4</div>
+  <div>DIV5</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (8) - index() 메서드 (2)</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // $("ul#li li").click(function() {
+      //   console.log("index: " + $(this).index());
+      // });
+
+      // $("ul#a li a").click(function() {
+      //   console.log("index: " + $(this).index());
+      // });
+
+      $("ul#a li a").click(function() {
+        var $aList = $("ul#a li a");
+        console.log("index: " + $aList.index($(this)));
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul id="li">
+    <li>MENU1</li>
+    <li>MENU2</li>
+    <li>MENU3</li>
+    </ul>
+
+    <ul id="a">
+    <li><a href="#">MENU4</a></li>
+    <li><a href="#">MENU5</a></li>
+    <li><a href="#">MENU6</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (3) - each() 메서드</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // $("ul li").each(function (index) {
+      //   document.write("index: " + index + "<br />");
+      // });
+
+      $("ul li").each(function(index, item) {
+        document.write("index: " + index + ", " + item.textContent + "<br />");
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul class="container">
+    <li>Kim</li>
+    <li>Park</li>
+    <li>Yu</li>
+    <li>An</li>
+    <li>Lim</li>
+  </ul>
+</body>
+</html>
