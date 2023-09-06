@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 다루기 (9) - </title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#tabMenu1 li").click(function(e) {
+        alert("index: " + $(this).index());
+      });
+
+      var currentIndex = 0;
+      var $menuItems = $("#tabMenu1 li");
+      var timerID = setInterval(function() {
+        var $item = $menuItems.eq(currentIndex);
+        $item.addClass("select");
+        currentIndex ++;
+
+
+        if(currentIndex >= $menuItems.length) {
+          clearInterval(timerID);
+          currentIndex = 0;
+        };
+      }, 1000);
+    });
+  </script>
+  <style>
+    .tab-menu {
+      list-style: none;
+      height: 80px;
+    }
+
+    .tab-menu li {
+      width: 100px;
+      height: 40px;
+      margin: 0 10px;
+      background-position-y: 0;
+      text-indent: -1000px;
+      overflow: hidden;
+      /* display: inline-block; */
+      float: left;
+    }
+
+    .tab-menu li:hover {
+      background-position-y: -40px;
+    }
+
+    .tab-menu li.select {
+      height: 80px;
+      background-position-y: -80px;
+    }
+
+    .menuItem1 {background-image: url(resources/newbtn_bar1.png);}
+    .menuItem2 {background-image: url(resources/newbtn_bar2.png);}
+    .menuItem3 {background-image: url(resources/newbtn_bar3.png);}
+    .menuItem4 {background-image: url(resources/newbtn_bar4.png);}
+    .menuItem5 {background-image: url(resources/newbtn_bar5.png);}
+    .menuItem6 {background-image: url(resources/newbtn_bar6.png);}
+  </style>
+</head>
+<body>
+  <ul class="tab-menu" id="tabMenu1">
+    <li class="menuItem1">GOOGLE</li>
+    <li class="menuItem2">FACEBOOK</li>
+    <li class="menuItem3">PINTEREST</li>
+    <li class="menuItem4">TWITTER</li>
+    <li class="menuItem5">AIRBNB</li>
+    <li class="menuItem6">PATH</li>
+  </ul>
+</body>
+</html>

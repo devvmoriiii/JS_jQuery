@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 생성 (1) - jQuery ver. vs JS ver.</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      // jQuery ver.
+      // var cnt = 0;
+      // $("#btnCre").click(function() {
+      //   cnt ++;
+      //   var $li = $("<li>MENU" + cnt + "</li>");
+      //   console.log($li.get(0));
+      //   // document.write($li.get(0));
+      // });
+
+      // JS ver.
+      var cntJS = 6
+      $("#btnCre").click(function() {
+        cntJS ++;
+        var li = document.createElement("li");
+        var liText = document.createTextNode("MENU" + cntJS);
+        li.appendChild(liText);
+        var menu = document.querySelector("#menu");
+        menu.appendChild(li);
+
+        // console.log(li);
+      });
+    });
+  </script>
+
+  <style>
+    * {
+      font-size: 15px;
+      font-family: "Noto Sans KR";
+    }
+
+    ul {
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    ul, li {
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+
+    li.select {
+      background-color: lightcyan;
+    }
+  </style>
+</head>
+<body>
+  <button id="btnCre">CREATE</button>
+  <ul id="menu">
+    <li>MENU1</li>
+    <li>MENU2</li>
+    <li>MENU3</li>
+    <li>MENU4</li>
+    <li class="select">MENU5</li>
+    <li>MENU6</li>
+  </ul>
+</body>
+</html>
