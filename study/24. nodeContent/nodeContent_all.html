@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 조작 및 내용 변경 (1) - </title>
+  <link rel="stylesheet" href="css/nodeContent_all.css">
+  <script src="lib/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+  <form action="">
+    <input type="text" id="contentText" placeholder="문자를 입력하세요."  required />
+  </form>
+
+  <div id="btn">
+    <button id="add" type="button">Add</button>
+    <button id="update" type="button">Update</button>
+    <button id="remove" type="button">Remove</button>
+    <button id="removeAll" type="button">Remove (All)</button>
+    <button id="up" type="button">UP</button>
+    <button id="down" type="button">DOWN</button>
+  </div>
+
+  <div id="bar"></div>
+
+  <ul id="content">
+  </ul>
+</body>
+<script src="js/nodeContent_all.js"></script>
+</html>

@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>노드 추가 (1) - prepend(), prependTo() 메서드</title>
+  <title>노드 추가 (2) - append(), appendTo() 메서드</title>
   <script src="lib/jquery-3.7.0.min.js"></script>
   <script>
     $(document).ready(function() {
       var cnt = 6;
 
-      $("#btnCre").click(function() {
-        cnt ++;
-        var $li = $("<li>MENU" + cnt + "</li>");
+      $("#btnCre").click(function () {
+        cnt++;
+        var $li = $("<li>NEW MENU " + cnt + "</li>");
 
-        $("#menu").prepend("<li>MENU" + cnt + "</li>"); 
-        $("#menu").prepend($li); 
-        $li.prependTo($("#menu"));
+        $("ul#menu").append($li);
+        $li.appendTo($("ul#menu"));
       });
 
-      // this 를 활용하여 첫 번째 자식 노드로 이동
+      // this 를 활용하여 마지막 자식 노드로 이동      
       $("ul#menu li").click(function() {
-        $("#menu").prepend(this);
+        $("#menu").append(this);
       });
     });
   </script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 내용을 이용한 자식 노드 추가(1) - html() VS append()</title>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#add").click(function () {
+        var data = "";
+        for (i = 1; i <= 10; i++) {
+          data += "<li>MENU " + i + "</li>";
+        };
+
+        $("#menu").html(data);
+      });
+
+
+      $("#add").click(function() {
+        var data = "";
+        for (i = 1; i <= 10; i ++) {
+          data = "<li>MENU " + i + "</li>";
+          $("#menu").append(data);
+        };
+      });
+    });
+  </script>
+
+<style>
+  * {
+    font-size: 15px;
+    font-family: "Noto Sans KR";
+  }
+
+  ul {
+    border-collapse: collapse;
+    padding: 10px;
+  }
+
+  ul, li {
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
+
+  li.select {
+    background-color: lightcyan;
+  }
+</style>
+</head>
+<body>
+  <button id="add">ADD</button>
+  <ul id="menu">
+  </ul>
+</body>
+</html>
